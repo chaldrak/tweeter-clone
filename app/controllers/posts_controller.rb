@@ -15,6 +15,17 @@ class PostsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to posts_path, notice: "Tweet modifié !!!"
+    else
+      render "edit"
+    end
+  end
+
   def create
     @post = Post.new(post_params)
     if params[:back]
