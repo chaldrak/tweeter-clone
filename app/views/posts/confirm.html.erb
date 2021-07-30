@@ -1,0 +1,8 @@
+<h3>CONFIRMEZ VOTRE POST</h3>
+<%= form_with(model: @post, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  <p>content:<%= @post.content %></p>
+  <%= form.submit  "Confirm" %>
+  <br>
+  <%= form.submit "Retour", name: 'back' %>
+<% end %>

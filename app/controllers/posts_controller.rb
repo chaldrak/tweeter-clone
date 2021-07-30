@@ -6,5 +6,17 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  
+  def confirm
+    @post = Post.new(post_params)
+    render "index" if @post.invalid?
+  end
+
+  private
+  def post_params
+    params.require(:post).permit(:content)
+  end
+
+  def get_post
+    @post = Post.find(params[:id])
+  end
 end
