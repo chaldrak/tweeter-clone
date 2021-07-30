@@ -12,6 +12,9 @@ class PostsController < ApplicationController
     render "index" if @post.invalid?
   end
 
+  def show
+  end
+
   def create
     @post = Post.new(post_params)
     if params[:back]
