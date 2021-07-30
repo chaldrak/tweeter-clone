@@ -1,0 +1,14 @@
+<%= form_with(model: @post, local: true) do |form| %>
+    <% if @post.errors.any? %>
+        <ul style="color: red">
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="post_content">
+      <%= form.text_area :content, size: "35x4", placeholder: "What's up" %>
+    </div>
+    <%= form.submit "Poster"%>
+<% end %>
