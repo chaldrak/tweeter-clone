@@ -11,8 +11,8 @@
             <ul>
               <li><a href="posts/<%= post.id %>" title="show"><i class="fas fa-eye"></i></a></li>
               <li><a href="posts/<%= post.id %>/edit" title="edit"><i class="far fa-edit"></i></a></li>
-              <li><a href="" title="delete"><i class="fas fa-trash-alt"></i></a></li>
-              <%= link_to 'X', post_path(post.id), method: :delete, data: {confirm: "Voulez-vous vraiment supprimer ce Tweet ?"} %>
+              <li><%= link_to 'X', post_path(post.id), method: :delete, data: {confirm: "Voulez-vous vraiment supprimer ce Tweet ?"}, title: "delete" %></li>
+              
             </ul>
           </div>
         </div>

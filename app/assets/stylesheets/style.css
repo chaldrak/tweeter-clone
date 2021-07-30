@@ -136,3 +136,8 @@ nav .tweet-btn{
   border-bottom: 1px solid black;
   padding-bottom: 20px;
 }
+.post-content-show{
+  padding: 20px;
+  border: 1px solid #1DA1F2;
+  width: 100%;
+}
