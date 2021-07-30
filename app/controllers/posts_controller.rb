@@ -18,6 +18,11 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def destroy
+    @post.delete
+    redirect_to posts_path, notice: "Tweet supprimé !!!"
+  end
+
   def update
     if @post.update(post_params)
       redirect_to posts_path, notice: "Tweet modifié !!!"
