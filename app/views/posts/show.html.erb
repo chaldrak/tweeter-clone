@@ -1,15 +1,14 @@
-<p>DETAILS DU TWEET</p>
-<table>
-    <tr>
-        <th>Date d'ajout</th>
-        <td><%= @post.created_at %></td>
-    </tr>
-    <tr>
-        <th>Date de modification</th>
-        <td><%= @post.updated_at %></td>
-    </tr>
-    <tr>
-        <th>Content</th>
-        <td><%= @post.content %></td>
-    </tr>
-</table>
+<%= render 'layouts/header'%>
+<section class="middle">
+    <p class="home">Post's Details</p>
+      <article>
+        <div class="posts">
+          <p class="post-date"><span style="font-weight: bold">Date de post : </span><%= @post.updated_at %></p>
+          <p class="post-date"><span style="font-weight: bold">Date de modification : </span><%= @post.updated_at %></p>
+          <div class="post">
+            <p class="post-content"><%= @post.content %></p>
+          </div>
+        </div>
+      </article>
+    </section>
+<%= render 'layouts/footer' %>

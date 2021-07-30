@@ -1,14 +1,22 @@
-<p style="color: green"><%= notice %></p>
-<%= render 'form' %>
-<p>LISTE DES POSTS</p>
-<table>
-    <% @posts.each do |post| %>
-    <tr>
-        <td><%= post.content %></td>
-        <td><%= post.updated_at %></td>
-        <td><%= link_to 'Show', post_path(post.id) %></td>
-        <td><%= link_to 'Edit', edit_post_path(post.id) %></td>
-        <td><%= link_to 'Delete', post_path(post.id), method: :delete, data: {confirm: "Voulez-vous vraiment supprimer ce Tweet ?"} %></td>
-    </tr>
-    <% end if @posts %>
-</table>
+<%= render 'layouts/header' %>
+<section class="middle">
+    <p class="home">Home</p>
+    <%= render 'form' %>
+    <article>
+      <% @posts.each do |post| %>
+        <div class="posts">
+          <p class="post-date"><%= post.updated_at %></p>
+          <div class="post">
+            <p class="post-content"><%= post.content %></p>
+            <ul>
+              <li><a href="posts/<%= post.id %>" title="show"><i class="fas fa-eye"></i></a></li>
+              <li><a href="posts/<%= post.id %>/edit" title="edit"><i class="far fa-edit"></i></a></li>
+              <li><a href="" title="delete"><i class="fas fa-trash-alt"></i></a></li>
+              <%= link_to 'X', post_path(post.id), method: :delete, data: {confirm: "Voulez-vous vraiment supprimer ce Tweet ?"} %>
+            </ul>
+          </div>
+        </div>
+        <% end if @posts %>
+    </article>
+</section>
+<%= render 'layouts/footer' %>

@@ -1,8 +1,13 @@
-<h3>CONFIRMEZ VOTRE POST</h3>
-<%= form_with(model: @post, local: true) do |form| %>
-  <%= form.hidden_field :content %>
-  <p>content:<%= @post.content %></p>
-  <%= form.submit  "Confirm" %>
-  <br>
-  <%= form.submit "Retour", name: 'back' %>
-<% end %>
+<%= render 'layouts/header' %>
+<section class="middle">
+    <p class="home">Confirm Post</p>
+    <%= form_with(model: @post, class: "form", local: true) do |form| %>
+      <%= form.hidden_field :content %>
+      <p><%= @post.content %></p>
+      <div class="btns">
+        <%= form.submit  "Confirm", class: "submit-btn" %>
+        <%= form.submit "Retour", name: 'back' , class: "back-btn" %>
+      </div>
+    <% end %>
+</section>
+<%= render 'layouts/footer' %>

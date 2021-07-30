@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: auto 100px;
+  display: flex;
+}
+nav{
+  width: 50%;
+  border-right: 1px solid gray;
+  text-align: left;
+  font-size: 1.6rem;
+}
+nav .logo{
+  color: #1DA1F2;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+}
+nav .nav-menu{
+  margin: 0;
+  padding: 0;
+}
+nav .nav-menu li{
+  list-style-type: none;
+  padding-bottom: 20px;
+}
+nav .nav-menu .active{
+  color: #1DA1F2;
+}
+nav .nav-menu a{
+  text-decoration: none;
+  color: black;
+  padding: 5px 20px;
+}
+nav .nav-menu a:hover{
+  color: #1DA1F2;
+  background-color: rgba(29, 161, 242, 0.2);
+  border-radius: 30px;
+}
+nav .tweet-btn{
+  color: white;
+  background-color: #1DA1F2;
+  border-radius: 30px;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+}
+.middle{
+  width: 100%;
+  overflow: scroll;
+  height: 650px;
+}
+.middle .home{
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+  padding: 0 0 10px 10px;
+}
+.middle .form{
+  border-bottom: 10px solid lightgray;
+  padding: 0 0 10px 10px;
+}
+.middle .form textarea{
+  border-style: none;
+  border-color: Transparent;
+  width: 90%;
+  padding: 10px;
+}
+.middle .form .submit-btn{
+  color: #fff;
+  background-color: #1DA1F2;
+  border: #1DA1F2;
+  width: 100px;
+  height: 30px;
+  border-radius: 30px;
+}
+.middle .form .back-btn{
+  color: #1DA1F2;
+  background-color: #fff;
+  border: 1px solid #1DA1F2;
+  width: 100px;
+  height: 30px;
+  border-radius: 30px;
+}
+.middle .posts{
+  padding: 0 10px;
+}
+.middle .posts .post-date{
+  color: #fff;
+  background-color: #1DA1F2;
+  padding: 2px;
+}
+.middle .posts .post .post-content{
+  text-align: justify;
+}
+.middle .posts .post{
+  display: flex;
+  justify-content: space-between;
+}
+.middle .posts .post ul li{
+  list-style: none;
+  padding-right: 10px;
+}
+.middle .posts .post ul{
+  display: flex;
+}
+.middle .posts .post ul a{
+  text-decoration: none;
+  color: #1DA1F2;
+}
+.middle .posts .post ul a:hover{
+  color: #1DA1F2;
+  opacity: 0.5;
+}
+.end{
+  width: 60%;
+  padding-left: 20px;
+}
+.end .search{
+  padding: 10px 20px;
+  background-color: #1DA1F2;
+  border-radius: 30px;
+}
+.end .search input{
+  background-color: #1DA1F2;
+  border-style: none;
+}
+.end .card{
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin-bottom: 100px;
+}
+.end .card .trends{
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
